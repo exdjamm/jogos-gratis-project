@@ -1,22 +1,46 @@
 :root{
-	--site-bgcolor: #555555;
+	--site-bgcolor: #0f0122f0;
 
-	--barra-bgcolor: grey;
-	--barra-width: 237px /*165px*/;
+	--barra-bgcolor: #0f01228a;
+	--barra-width: 220px /*165px*/;
 
-	--header-height: 42px/*50px*/;
-	--header-bgcolor: blue;
+	--header-height: 45px/*50px*/;
+	--header-bgcolor: #0f0122f2;
 
+	--img-icon-account: ;
 }
+
 body, html{
 	margin: 0;
 	font-family: Arial;
 	height: 100%;
+	color: white;
 }
 
 .cabecario{
 	height: var(--header-height);
 	background-color: var(--header-bgcolor);
+}
+.cabecario .icon-logo{
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 42px;
+	width: 42px;
+	background-color: white;/*Temporario*/
+	border-radius: 100%; 
+}
+.cabecario .icon-account{
+	position: absolute;
+	top: 2px;
+	right: 0;
+	height: 42px;
+	width: 42px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.cabecario .icon-account:hover{
+	border: 1px solid black;
 }
 
 #content{
@@ -33,4 +57,36 @@ body, html{
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+}
+
+.barra-lateral * {
+	margin: 5px 0 5px 0px;
+}
+.barra-lateral .title{
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+	font-size: 15px;
+}
+
+.barra-lateral .logo-plataforma {
+	height: 37px;
+	vertical-align: middle;
+}
+.title-plataforma{
+	text-transform: uppercase;
+	vertical-align: super;
+	font-weight: bold;
+	margin-left: 4px;
+	font-size: 17px;
+}
+
+#content-header h2{
+	font-size: 38px;
+	text-indent: 16px;
+	margin: 0;
+	margin-top: 0px;
+	margin-top: 3px;
+	font-family: none;
 }
