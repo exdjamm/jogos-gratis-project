@@ -1,0 +1,36 @@
+:root{
+	--site-bgcolor: #555555;
+
+	--barra-bgcolor: grey;
+	--barra-width: 237px /*165px*/;
+
+	--header-height: 42px/*50px*/;
+	--header-bgcolor: blue;
+
+}
+body, html{
+	margin: 0;
+	font-family: Arial;
+	height: 100%;
+}
+
+.cabecario{
+	height: var(--header-height);
+	background-color: var(--header-bgcolor);
+}
+
+#content{
+	background-color: var(--site-bgcolor);
+
+ 	height: 100%;
+ 	display: flex;
+}
+
+.barra-lateral{
+	background-color: var(--barra-bgcolor);
+	width: var(--barra-width);
+
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
