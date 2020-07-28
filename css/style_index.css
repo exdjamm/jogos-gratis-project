@@ -88,4 +88,11 @@ body, html{
 	margin: 0;
 	margin-top: 0px;
 	margin-top: 3px;
+<<<<<<< HEAD
 }
+=======
+	font-family: none;
+}
+
+a { color: inherit; } 
+>>>>>>> 0c19199acb033e3ec601b5fe939286be0ea37fd5
