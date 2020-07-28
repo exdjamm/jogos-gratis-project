@@ -38,6 +38,7 @@ body, html{
 	width: 42px;
 	border-radius: 100%;
 	cursor: pointer;
+  	box-shadow: 0 0 4px black;
 }
 .cabecario .icon-account:hover{
 	background: #836FFF radial-gradient(circle, transparent 1%, #836FFF 1%) center/15000%;
@@ -103,10 +104,15 @@ body, html{
 	margin-left: 23px;
 }
 .info-game{
+	transition: transform .11s;
 	margin-right: 7px;
 	margin-bottom: 37px;
 	width: 188px;
 	height: 297.667px
+}
+.info-game:hover{
+	background: #836FFF radial-gradient(circle, transparent 1%, #836FFF 1%) center/15000%;
+	transform: scale(1.1);
 }
 .game-img{
 	background-color: black;
