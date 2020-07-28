@@ -1,7 +1,7 @@
 :root{
 	--site-bgcolor: #0f0122f0;
 
-	--barra-bgcolor: #0f01228a;
+	--barra-bgcolor: #150727;
 	--barra-width: 220px /*165px*/;
 
 	--header-height: 45px/*50px*/;
@@ -47,8 +47,9 @@ body, html{
 #content{
 	background-color: var(--site-bgcolor);
 
- 	height: 100%;
- 	display: flex;
+ 	/*! height: 100%; */
+ 	display: block;
+	width: 100%;
 }
 
 .barra-lateral{
@@ -58,6 +59,7 @@ body, html{
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	min-width: var(--barra-width);
 }
 
 .barra-lateral * {
@@ -83,6 +85,9 @@ body, html{
 	font-size: 17px;
 }
 
+#content-header{
+	width: 100%;
+}
 #content-header h2{
 	font-size: 38px;
 	text-indent: 16px;
@@ -131,5 +136,7 @@ body, html{
   text-align: center;
   margin: 5px 5px 5px 5px;
 }
-
+#main{
+	display: flex;width: 100%;height: 100%;
+}
 a { color: inherit; } 
