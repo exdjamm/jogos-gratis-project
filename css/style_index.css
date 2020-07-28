@@ -80,12 +80,21 @@ body, html{
 }
 .title-plataforma{
 	text-transform: uppercase;
-	vertical-align: super;
+	vertical-align: middle;
 	font-weight: bold;
 	margin-left: 4px;
 	font-size: 17px;
 }
-
+#plataforma{
+	transition: transform .11s;
+	width: 200px;
+	height: 50px;
+	margin-left: 10px;
+}
+#plataforma:hover{
+	background: #1a0033 radial-gradient(circle, transparent 1%, #1a0033 1%) center/15000%;
+	transform: scale(1.1);
+}
 #content-header{
 	width: 100%;
 }
