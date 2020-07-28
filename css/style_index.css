@@ -139,19 +139,21 @@ body, html{
 		margin-left: 10px
 }
 
-#tags {
+#tags{
   display: flex;
   flex-wrap: wrap;
   margin-top: 2px;
+  max-height: 27px;
 }
 .tag {
-  height: min-content;
-  border-radius: 10px 10px 10px;
+
+  border-radius: 5px 5px 5px 5px;
   background-color: gray;
-  /*! width: max-content; */
-  padding: 0 10px 0px 1px;
-  text-align: center;
-  margin: 5px 5px 5px 5px;
+  padding: 0 5px 0px 5px;
+  margin: 2px 0px 0 2px;
+  font-size: 10px;
+  font-weight: bold;
+  flex-basis: 0;
 }
 #main{
 	display: flex;width: 100%;height: 100%;
