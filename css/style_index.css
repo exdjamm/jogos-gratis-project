@@ -11,6 +11,7 @@
 }
 
 body, html{
+	overflow: hidden;
 	margin: 0;
 	font-family: Arial;
 	height: 100%;
@@ -46,8 +47,9 @@ body, html{
 }
 
 #content{
+	padding-bottom: 30px;
 	background-color: var(--site-bgcolor);
-
+	overflow: auto;
  	/*! height: 100%; */
  	display: block;
 	width: 100%;
