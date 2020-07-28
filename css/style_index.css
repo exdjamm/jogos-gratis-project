@@ -90,3 +90,5 @@ body, html{
 	margin-top: 3px;
 	font-family: none;
 }
+
+a { color: inherit; } 
