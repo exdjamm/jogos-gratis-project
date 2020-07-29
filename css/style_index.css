@@ -1,3 +1,4 @@
+
 :root{
 	--site-bgcolor: #0f0122f0;
 
@@ -94,6 +95,7 @@ body, html{
 .barra-lateral .logo-plataforma {
 	height: 37px;
 	vertical-align: middle;
+	border-radius:15%
 }
 .title-plataforma{
 	text-transform: uppercase;
@@ -158,7 +160,7 @@ body, html{
 	margin-right: 7px;
 	margin-bottom: 37px;
 	width: 188px;
-	height: 297.667px
+	height: 295.667px
 }
 .info-game:hover{
 	background: #836FFF;
