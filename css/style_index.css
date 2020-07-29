@@ -29,7 +29,9 @@ body, html{
 ::-webkit-scrollbar-thumb{
 	background-color: rebeccapurple;
 }
-
+.clickable{
+	cursor: pointer;
+}
 .cabecario{
 	height: var(--header-height);
 	background-color: var(--header-bgcolor);
