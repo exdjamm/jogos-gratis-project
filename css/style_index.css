@@ -16,6 +16,18 @@ body, html{
 	font-family: Arial;
 	height: 100%;
 	color: white;
+
+	/*Scrollbar Firefox*/
+	scrollbar-color: rebeccapurple #230F30;
+}
+
+/*Scrollbar Outros Navegadores*/
+::-webkit-scrollbar{
+	width: 10px;
+	background-color: #230F30;
+}
+::-webkit-scrollbar-thumb{
+	background-color: rebeccapurple;
 }
 
 .cabecario{
@@ -37,13 +49,14 @@ body, html{
 	right: 0;
 	height: 42px;
 	width: 42px;
+	margin-right: 5px;
 	border-radius: 100%;
 	cursor: pointer;
   	box-shadow: 0 0 4px black;
 }
 .cabecario .icon-account:hover{
-	background: #836FFF radial-gradient(circle, transparent 1%, #836FFF 1%) center/15000%;
-	border: 1px solid white;
+	background: #6A5ACD;
+	box-shadow: 0 0 4px white;
 }
 
 #content{
@@ -54,11 +67,10 @@ body, html{
  	display: block;
 	width: 100%;
 }
-
 .barra-lateral{
 	background-color: var(--barra-bgcolor);
+	/*background-image: linear-gradient(#0d0d26, #19194d, #0d0d26);*/
 	width: var(--barra-width);
-
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -96,7 +108,7 @@ body, html{
 	margin-left: 10px;
 }
 #plataforma:hover{
-	background: #1a0033 radial-gradient(circle, transparent 1%, #1a0033 1%) center/15000%;
+	background: #1a0033;
 	transform: scale(1.1);
 }
 
@@ -147,7 +159,7 @@ body, html{
 	height: 297.667px
 }
 .info-game:hover{
-	background: #836FFF radial-gradient(circle, transparent 1%, #836FFF 1%) center/15000%;
+	background: #836FFF;
 	transform: scale(1.1);
 }
 
@@ -187,7 +199,6 @@ body, html{
   max-height: 27px;
 }
 .tag {
-
   border-radius: 5px 5px 5px 5px;
   background-color: gray;
   padding: 0 5px 0px 5px;
