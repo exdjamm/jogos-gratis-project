@@ -169,13 +169,13 @@ body, html{
   position: relative;
 }
 .marca-dagua img{
-  width: 100px;
+  width: 43px;
   position:absolute;
   right:0;
-  opacity: 0.6;
+  opacity: 0.8;
   /* border-bottom: 2px solid black;border-left: 2px solid black; */
-  border-radius: 100px;
-  transform: translate(30%, -30%)
+  /*border-radius: 100px;*/
+  /*transform: translate(30%, -30%)*/
 }
 #game-img{
   overflow:hidden;
