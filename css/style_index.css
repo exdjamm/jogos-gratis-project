@@ -34,9 +34,50 @@ body, html{
 	cursor: pointer;
 }
 .cabecario{
+	justify-content: center;
+	display: flex;
 	height: var(--header-height);
 	background-color: var(--header-bgcolor);
 }
+
+#search{
+	margin-top: 5px;
+	width:300px;
+	height:30px;
+}
+
+#txt{
+	float:left;
+	padding-left: 5px;
+	background-color:#1a0033;
+	border:solid 2px #6A5ACD;
+	border-radius: 5px 0 0  5px;
+	height:30px;
+	width:260px;
+	color: white;
+	font-family: 'Arial';
+}
+#txt:focus, #txt:focus, #txt:focus {
+    outline: 0;
+} 
+
+#btn{
+	cursor: pointer;
+	background:#6A5ACD;
+}
+#btn:hover{
+	background:#6A5ACD;
+}
+
+#search img{
+	padding: 2px;
+	height: 32px;
+	width: 32px;
+	border-radius: 0 5px 5px 0;
+	position: absolute;
+	float:right;
+}
+
 .cabecario .icon-logo{
 	position: absolute;
 	top: 2px;
