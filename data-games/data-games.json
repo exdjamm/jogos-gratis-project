@@ -1,0 +1,15 @@
+[
+	{
+	"gameCategory": "Recentes",
+	"games":
+		[
+			{
+			"name":"Jogo teste",
+			"tags":["ble","ble"],
+			"imgSrc":"link",
+			"plataform":"steam"
+			}
+		]
+	}	
+
+]
