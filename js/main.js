@@ -1,5 +1,5 @@
- 
 let content = document.querySelector('#content');
+var last='Categorias';
 
 function createElement({tag, id, classe}) {
 	new_element =  document.createElement(tag)
@@ -38,7 +38,6 @@ function createGameIndice(games) {
 function createInfoGame(game) {
 	infoGameDiv = createElement({tag:'div', classe:'info-game clickable'})
 
-	
 	gameimg = createGameImg({imgSrc:game.imgSrc, plataform:game.plataform})
 	subinfo = createSubInfo({name:game.name, tags:game.tags})
 	
@@ -81,11 +80,41 @@ function createSubInfo({name, tags}) {
 	return subinfoDiv
 }
 
+function loadClick(plataformaSelecionada){
+	loadOver(plataformaSelecionada)
+	last = plataformaSelecionada;
+}
+
+function loadOver(plataformaSelecionada){
+	content.innerHTML = ""; 
+
+	divPlataforma=createElement({tag:'div', id:'content-header'})
+	nomePlataforma=createElement({tag:"h2", id:"superMario"})
+	content.appendChild(divPlataforma)
+	divPlataforma.appendChild(nomePlataforma)
+
+	if(plataformaSelecionada=='Categorias'){
+		document.getElementById("superMario").innerHTML = plataformaSelecionada;
+		loadGames()
+	}else{
+		document.getElementById("superMario").innerHTML = "Grátis na "+ plataformaSelecionada;
+	}
+}
+
+function loadOut(plataformaSelecionada){
+	loadClick(last)
+}
 
 function loadGames(){
     var request = new XMLHttpRequest();
     request.open('GET', './data-games/data-games.json')
     request.responseType = 'json'
+
+    divPlataforma=createElement({tag:'div', id:'content-header'})
+	nomePlataforma=createElement({tag:"h2", id:"superMario"})
+	content.appendChild(divPlataforma)
+	divPlataforma.appendChild(nomePlataforma)
+	document.getElementById("superMario").innerHTML = 'Categorias';
 
     request.onload = function(){
     	allGames = request.response
