@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<title>Jogos Grátis</title>
@@ -29,14 +29,29 @@
 			<div id="plataformas">
 				<span class="title-barral">principais plataformas</span>
 				
-					<div id="plataforma" class="clickable">
+				<p id="teste"></p>
+
+					<!--TODAS AS PLATAFORMAS-->
+					<div id="plataforma" class="clickable"  onmouseout="loadOut()"
+															onmouseover="loadOver('Categorias')"
+															onclick="loadClick('Categorias')">
+						<span class="title-plataforma">TODAS AS PLATAFORMAS</span>
+					</div>
+
+
+					<!--EPIC GAMES-->
+					<div id="plataforma" class="clickable"  onmouseout="loadOut()"
+															onmouseover="loadOver('Epic')"
+															onclick="loadClick('Epic')">
 						<img class="logo-plataforma" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/882px-Epic_Games_logo.svg.png" style="width:37px">
 						<span class="title-plataforma">EPIC GAMES</span>
 					</div>
 
 
-
-					<div id="plataforma"  class="clickable">
+					<!--GOG.com-->
+					<div id="plataforma"  class="clickable" onmouseout="loadOut()"
+															onmouseover="loadOver('GOG.com')"
+															onclick="loadClick('GOG.com')">
 						<img class="logo-plataforma" src="https://upload.wikimedia.org/wikipedia/commons/d/de/GOG.com_Logo.png"
 						style="width:36px">
 						<span class="title-plataforma">GOG</span><span style="vertical-align: middle;
@@ -44,73 +59,71 @@
 					</div>
 				
 
-
-					<div id="plataforma"  class="clickable">
+					<!--ITCH.IO-->
+					<div id="plataforma"  class="clickable" onmouseout="loadOut()"
+															onmouseover="loadOver('itch.io')"
+															onclick="loadClick('itch.io')">
 						<img class="logo-plataforma" src="https://pbs.twimg.com/profile_images/1212846124945428480/w1htiJ0v_400x400.png">
 						<span class="title-plataforma">itch.io</span>
 					</div>
 
 				
-
-					<div id="plataforma" class="clickable">
+					<!--STEAM-->
+					<div id="plataforma" class="clickable"  onmouseout="loadOut()"
+															onmouseover="loadOver('Steam')"
+															onclick="loadClick('Steam')">
 						<img class="logo-plataforma" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_steam-512.png">
 						<span class="title-plataforma">STEAM</span>
 					</div>
 				
 
-				
-					<div id="plataforma"  class="clickable">
+					<!--UPLAY-->
+					<div id="plataforma"  class="clickable" onmouseout="loadOut()"
+															onmouseover="loadOver('Uplay')"
+															onclick="loadClick('Uplay')">
 						<img class="logo-plataforma" src="https://png2.cleanpng.com/sh/2ad90d7c18ea890289d2315c8b2f6b1f/L0KzQYm3VMA0N6NBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TgVxdJJARdV1aYCwccP7Tflkd146edU8M0G2cYS3UfQ1Ol88S6Y8NEezRIK8UsI4PGI6TqQ6OUe0PsH1h5==/kisspng-computer-icons-uplay-clip-art-ico-5ac3313a301d42.7343470415227415621971.png">
 						<span class="title-plataforma">UPLAY</span>
 					</div>
 				
-
 			</div>
 
-			<!--JOGOS RECOMENDADOS-->
-			
 
+			<!--JOGOS RECOMENDADOS-->
 			<div id="recomendados">
 				<span class="title-barral">jogos recomendados</span>
 				<!--FOGARÉU GRATUITO-->
-				
 					<div id="jogo-recomendado"  class="clickable">
 						<img class="logo-recomendado" src="https://equipemult.com.br/wordpress/wp-content/uploads/2019/09/Free-Fire-Banner.png" width="200" height="60">
 					</div>
 
 				<!--VALORANT-->
-				
 					<div id="jogo-recomendado"  class="clickable">
 						<img class="logo-recomendado" src="https://www.mouse-sensitivity.com/uploads/monthly_2020_04/valorant.jpg.ea8faf85c5b22084af7e2a5446dedd35.jpg" width="200" height="60">
 					</div>
 				
 
 				<!--CS-GO-->
-				
 					<div id="jogo-recomendado" class="clickable">
 						<img class="logo-recomendado" src="https://steamcdn-a.akamaihd.net/steam/subs/54029/header.jpg?t=1544227353" width="200" height="60">
 					</div>
 		
-
 			</div>
 
 		</div>
+
 		<div id="content">
 		
 			<!-- Cabecario do indice dos jogos -->
-			<div id="content-header">
-				<h2>Categorias</h2>
-			</div>
-
 			<!-- Indice dos jogos -->
 			<!-- JOGOS RECENTES-->
 			
-
 		</div>
 </div>
+
 <script type="text/javascript" src="./js/main.js">
-	
+
 </script>
+
 </body>
 
 </html>
