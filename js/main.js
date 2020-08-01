@@ -121,9 +121,8 @@ function loadOver(plataformaSelecionada){
 }
 
 function loadOut(plataformaSelecionada){
-	if(last!=plataformaSelecionada){
+	
 		loadClick(last);
-	}
 }
 
 
