@@ -251,7 +251,7 @@ body, html{
   font-size: 10px;
   font-weight: bold;
   flex-basis: 0;
-  height: max-content;
+  height: min-content;
 }
 #main{
 	display: flex;width: 100%;height: 100%;
