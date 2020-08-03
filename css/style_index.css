@@ -1,4 +1,3 @@
-
 :root{
 	--site-bgcolor: #0f0122f0;
 
@@ -195,6 +194,7 @@ body, html{
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-left: 23px;
+	margin-bottom: 25px;
 }
 .info-game{
 	transition: transform .11s;
