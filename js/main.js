@@ -1,5 +1,5 @@
 let content = document.querySelector('#content');
-var last='Categorias';
+var last='games';
 
 function createElement({tag, id, classe}) {
 	new_element =  document.createElement(tag)
@@ -10,7 +10,6 @@ function createElement({tag, id, classe}) {
 		new_element.className = classe	
 	}
 	
-
 	return new_element
 }
 
@@ -81,6 +80,14 @@ function createSubInfo({name, tags}) {
 	return subinfoDiv
 }
 
+function logosPlataforma(){
+	document.querySelectorAll('.steam-logo').forEach(img => {img.src = 'https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_steam-512.png'})
+	document.querySelectorAll('.epic-logo').forEach(img => {img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/882px-Epic_Games_logo.svg.png'})
+	document.querySelectorAll('.uplay-logo').forEach(img => {img.src = 'https://png2.cleanpng.com/sh/2ad90d7c18ea890289d2315c8b2f6b1f/L0KzQYm3VMA0N6NBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TgVxdJJARdV1aYCwccP7Tflkd146edU8M0G2cYS3UfQ1Ol88S6Y8NEezRIK8UsI4PGI6TqQ6OUe0PsH1h5==/kisspng-computer-icons-uplay-clip-art-ico-5ac3313a301d42.7343470415227415621971.png'})
+	document.querySelectorAll('.gog-logo').forEach(img => {img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/de/GOG.com_Logo.png'})
+	document.querySelectorAll('.itch-logo').forEach(img => {img.src = 'https://pbs.twimg.com/profile_images/1212846124945428480/w1htiJ0v_400x400.png'})
+}
+
 function criarContentHeader(){
 	divPlataforma=createElement({tag:'div', id:'content-header'})
 	nomePlataforma=createElement({tag:"h2", id:"superMario"})
@@ -89,51 +96,34 @@ function criarContentHeader(){
 }
 
 
+function loadClick(plataformaSelecionada, aux){
+	loadGames(plataformaSelecionada)
 
-function loadClick(plataformaSelecionada){
-	content.innerHTML = ""; 
-	criarContentHeader();
-
-	if(plataformaSelecionada=='Categorias'){
-		document.getElementById("superMario").innerHTML = plataformaSelecionada;
-		loadGames()
-	}else {
-		document.getElementById("superMario").innerHTML = "Grátis na "+ plataformaSelecionada;
-	}
-	last = plataformaSelecionada;
-	//loadGames()
+	aux==1 ? last = plataformaSelecionada : '';
 }
 
+
 function loadOver(plataformaSelecionada){
-
-	if(plataformaSelecionada!=last){
-		content.innerHTML = ""; 
-		criarContentHeader();
-
-		if(plataformaSelecionada=='Categorias'){
-			document.getElementById("superMario").innerHTML = plataformaSelecionada;
-			loadGames()
-		}else {
-			document.getElementById("superMario").innerHTML = "Grátis na "+ plataformaSelecionada;
-		}
-	}
-	
+	plataformaSelecionada!=last ? loadClick(plataformaSelecionada, 0) : '' ;
 }
 
 function loadOut(plataformaSelecionada){
-	
 		loadClick(last);
 }
 
 
+function loadGames(platformOpen){
+	content.innerHTML = "";
 
-function loadGames(){
+	var identificador = platformOpen=='games' ? "Categorias" : "Grátis na " + platformOpen ;
+	
     var request = new XMLHttpRequest();
     request.open('GET', './data-games/data-games.json')
     request.responseType = 'json'
 
-    criarContentHeader();
-	document.getElementById("superMario").innerHTML = 'Categorias';
+    criarContentHeader()
+
+	document.getElementById("superMario").innerHTML = identificador;
 
     request.onload = function(){
     	allGames = request.response
@@ -145,15 +135,7 @@ function loadGames(){
     		content.appendChild(gameCat)
     		content.appendChild(section)
 
-    		document.querySelectorAll('.steam-logo').forEach(img => {img.src = 'https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_steam-512.png'})
-
-			document.querySelectorAll('.epic-logo').forEach(img => {img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/882px-Epic_Games_logo.svg.png'})
-
-			document.querySelectorAll('.uplay-logo').forEach(img => {img.src = 'https://png2.cleanpng.com/sh/2ad90d7c18ea890289d2315c8b2f6b1f/L0KzQYm3VMA0N6NBfZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TgVxdJJARdV1aYCwccP7Tflkd146edU8M0G2cYS3UfQ1Ol88S6Y8NEezRIK8UsI4PGI6TqQ6OUe0PsH1h5==/kisspng-computer-icons-uplay-clip-art-ico-5ac3313a301d42.7343470415227415621971.png'})
-
-			document.querySelectorAll('.gog-logo').forEach(img => {img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/de/GOG.com_Logo.png'})
-
-			document.querySelectorAll('.itch-logo').forEach(img => {img.src = 'https://pbs.twimg.com/profile_images/1212846124945428480/w1htiJ0v_400x400.png'})
+    		logosPlataforma()
     	})
 
     }
@@ -161,4 +143,4 @@ function loadGames(){
     request.send()
 }
 
-loadGames()
+loadGames('games')
