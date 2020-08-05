@@ -1,4 +1,3 @@
-
 :root{
 	--site-bgcolor: #0f0122f0;
 
@@ -21,6 +20,8 @@ body, html{
 	/*Scrollbar Firefox*/
 	scrollbar-color: rebeccapurple #230F30;
 }
+
+a { color: inherit; } 
 
 /*Scrollbar Outros Navegadores*/
 ::-webkit-scrollbar{
@@ -46,6 +47,15 @@ body, html{
 	height:30px;
 }
 
+#search img{
+	padding: 2px;
+	height: 32px;
+	width: 32px;
+	border-radius: 0 5px 5px 0;
+	position: absolute;
+	float:right;
+}
+
 #txt{
 	float:left;
 	padding-left: 5px;
@@ -67,15 +77,6 @@ body, html{
 }
 #btn:hover{
 	background:#6A5ACD;
-}
-
-#search img{
-	padding: 2px;
-	height: 32px;
-	width: 32px;
-	border-radius: 0 5px 5px 0;
-	position: absolute;
-	float:right;
 }
 
 .cabecario .icon-logo{
@@ -256,4 +257,4 @@ body, html{
 #main{
 	display: flex;width: 100%;height: 100%;
 }
-a { color: inherit; } 
+
