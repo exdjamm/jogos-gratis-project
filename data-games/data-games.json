@@ -19,7 +19,7 @@
 			"plataform":"epic"},
 			
 			{"name":"From Orbit",
-			"tags":["Ação","Estrategia", "Indie"],
+			"tags":["Ação", "Indie", "Estrategia"],
 			"imgSrc":"https://img.itch.zone/aW1nLzE3MDQyNjYucG5n/original/LBF7Uq.png",
 			"plataform":"itch"},
 			
@@ -29,8 +29,10 @@
 			"plataform":"epic"}
 		]
 	}, 
-	{
+
+	{	
 		"gameCategory":"Grátis na Epic Games", 
+		"Selected":"Epic",
 		"games":[
 			{"name":"20XX",
 			"tags":["Plataforma","Roguelite"],
@@ -51,6 +53,36 @@
 			"tags":["Indie"],
 			"imgSrc":"https://static-cdn.jtvnw.net/ttv-boxart/Sludge%20Life.jpg",
 			"plataform":"epic"}
+		]
+	},
+
+
+	{	
+		"gameCategory":"Grátis na itch.io", 
+		"itch":"itch",
+		"games":[
+			
+			{"name":"From Orbit",
+			"tags":["Ação", "Indie", "Estrategia"],
+			"imgSrc":"https://img.itch.zone/aW1nLzE3MDQyNjYucG5n/original/LBF7Uq.png",
+			"plataform":"itch"}
+
+		]
+	},
+
+	{	
+		"gameCategory":"", 
+		"Steam":"Steam",
+		"games":[
+			
+		]
+	},
+
+	{	
+		"gameCategory":"",
+		"Uplay":"Uplay",
+		"games":[
+			
 		]
 	}
 

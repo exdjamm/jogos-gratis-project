@@ -2,12 +2,101 @@
 	--site-bgcolor: #0f0122f0;
 
 	--barra-bgcolor: #150727;
-	--barra-width: 220px /*165px*/;
 
 	--header-height: 45px/*50px*/;
 	--header-bgcolor: #0f0122f2;
 
 	--img-icon-account: ;
+}
+
+@media screen and (max-height: 640px){
+	#recomendados{
+		display: none;
+	}
+}
+
+/*TELA MAIOR*/
+@media screen and (min-width: 641px) {
+	:root{
+		--barra-width: 220px /*165px*/;
+		--plataforma-width: 200px;
+		--plataforma-scale: 1.1;
+		--sub-info-margin: 0px;
+	}
+
+	.info-game{
+		transition: transform .11s;
+		margin-right: 7px;
+		margin-bottom: 37px;
+		width: 188px;
+		height: 295.667px
+	}
+	#sub-info{
+		margin-top: var(--sub-info-margin);
+		padding-bottom: 5px;
+	}
+	.game-img{
+		background-color: black;
+		height: 272px;
+		width:100%;
+	}
+
+	#game-indice{
+		margin-left: 23px;
+	}
+
+}
+
+/*TELA MENOR*/
+@media screen and (max-width: 640px) {
+	:root{
+		--barra-width: 55px /*165px*/;
+		--plataforma-width: 0px;
+		--plataforma-scale: 1;
+		--sub-info-margin: -3px;
+	}
+
+	#recomendados{
+		display: none;
+	}
+
+	.title-plataforma{
+		display: none;
+	}
+
+	.barra-lateral .title-barral{
+		font-size: 0px;
+	}
+
+	.info-game{
+		transition: transform .11s;
+		margin-right: 7px;
+		margin-bottom: 37px;
+		/*width: 87px;*/
+		width: 30%;
+		min-width: 87px;
+		max-width: 90px;
+		height: 140.667px
+	}
+	#sub-info{
+		line-height: 10px;
+		margin-top: var(--sub-info-margin);
+		padding-bottom: 5px;
+	}
+	.game-img{
+		background-color: black;
+		height: 126px;
+		width:100%;
+	}
+
+	.title-game{
+		font-size: 12px;
+	}
+
+	#game-indice{
+		margin-left: 16px;
+	}
+
 }
 
 body, html{
@@ -19,7 +108,18 @@ body, html{
 
 	/*Scrollbar Firefox*/
 	scrollbar-color: rebeccapurple #230F30;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+					               supported by Chrome and Opera */
+
+	a { color: inherit; } 
 }
+
 
 /*Scrollbar Outros Navegadores*/
 ::-webkit-scrollbar{
@@ -45,6 +145,15 @@ body, html{
 	height:30px;
 }
 
+#search img{
+	padding: 2px;
+	height: 32px;
+	width: 32px;
+	border-radius: 0 5px 5px 0;
+	position: absolute;
+	float:right;
+}
+
 #txt{
 	float:left;
 	padding-left: 5px;
@@ -56,7 +165,7 @@ body, html{
 	color: white;
 	font-family: 'Arial';
 }
-#txt:focus, #txt:focus, #txt:focus {
+#txt:focus {
     outline: 0;
 } 
 
@@ -66,15 +175,6 @@ body, html{
 }
 #btn:hover{
 	background:#6A5ACD;
-}
-
-#search img{
-	padding: 2px;
-	height: 32px;
-	width: 32px;
-	border-radius: 0 5px 5px 0;
-	position: absolute;
-	float:right;
 }
 
 .cabecario .icon-logo{
@@ -147,16 +247,17 @@ body, html{
 
 #plataforma{
 	transition: transform .11s;
-	width: 200px;
+	width: var(--plataforma-width);
 	height: 50px;
 	margin-left: 10px;
 }
 #plataforma:hover{
 	background: #1a0033;
-	transform: scale(1.1);
+	transform: scale(var(--plataforma-scale));
 }
 
 #recomendados{
+	display: ;
 	position: absolute;
 	bottom: 0;
 }
@@ -185,24 +286,17 @@ body, html{
 	font-size: 28px;
 	text-indent: 16px;
 	margin-left: 5px;
-	margin-top: -10px;
-	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 	font-family: Arial;
 }
 #game-indice{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin-left: 23px;
 	margin-bottom: 25px;
 }
-.info-game{
-	transition: transform .11s;
-	margin-right: 7px;
-	margin-bottom: 37px;
-	width: 188px;
-	height: 295.667px
-}
+
 .info-game:hover{
 	background: #836FFF;
 	transform: scale(1.1);
@@ -212,7 +306,7 @@ body, html{
   position: relative;
 }
 .marca-dagua img{
-  width: 43px;
+  width: 23%;
   position:absolute;
   right:0;
   opacity: 0.8;
@@ -223,15 +317,6 @@ body, html{
 #game-img{
   overflow:hidden;
 }
-.game-img{
-	background-color: black;
-	height: 272px;
-	width:100%;
-}
-#sub-info{
-	padding-bottom: 5px;
-}
-
 .title-game{
 	font-weight: bold;
 	margin-left: 2px;
@@ -253,7 +338,7 @@ body, html{
   flex-basis: 0;
   height: min-content;
 }
+
 #main{
 	display: flex;width: 100%;height: 100%;
 }
-a { color: inherit; } 
