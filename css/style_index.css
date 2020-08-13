@@ -18,7 +18,7 @@ body, html{
 	color: white;
 
 	/*Scrollbar Firefox*/
-	scrollbar-color: rebeccapurple #230F30;
+	scrollbar-color: #663399 #230F30;
 }
 
 a { color: inherit; } 
